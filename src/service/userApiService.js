@@ -74,7 +74,7 @@ const updateUser = async (data) => {
         if (user) {
             //update
             user.save({
-
+                
             })
         } else {
             //not found

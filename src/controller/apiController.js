@@ -47,11 +47,11 @@ const handleLogin = async (req, res) => {
     try {
 
         let data = await loginRegisterService.handleUserLogin(req.body);
-
         return res.status(200).json({
             EM: data.EM, // error message
             EC: data.EC, // error code
             DT: data.DT, // data
+            data: req.body,
         })
     } catch (error) {
         console.log(error);
