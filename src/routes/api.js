@@ -1,6 +1,6 @@
 import express from 'express';
 import apiController from '../controller/apiController';
-import userController from '../controller/useController';
+import userController from '../controller/userController';
 import groupController from '../controller/groupController';
 
 const router = express.Router();

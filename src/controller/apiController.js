@@ -51,7 +51,6 @@ const handleLogin = async (req, res) => {
             EM: data.EM, // error message
             EC: data.EC, // error code
             DT: data.DT, // data
-            data: req.body,
         })
     } catch (error) {
         console.log(error);
