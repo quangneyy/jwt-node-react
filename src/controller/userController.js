@@ -51,7 +51,7 @@ const createFunc = async (req, res) => {
 
 const updateFunc = (req, res) => {
     try {
-
+        
     } catch (error) {
         console.log(error);
         return res.status(500).json({

@@ -1,8 +1,8 @@
 import db from '../models/index';
 import bcrypt from 'bcryptjs';
 import { Op } from 'sequelize';
+
 const salt = bcrypt.genSaltSync(10);
-const a = 20;
 
 const hashUserPassword = (userPassword) => {
     let hashPassword = bcrypt.hashSync(userPassword, salt);
@@ -121,4 +121,7 @@ const handleUserLogin = async (rawData) => {
 module.exports = {
     registerNewUser,
     handleUserLogin,
+    hashUserPassword,
+    checkEmailExist,
+    checkPhoneExist,
 }

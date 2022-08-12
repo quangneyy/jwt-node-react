@@ -1,6 +1,6 @@
 import db from '../models/index'
 
-const getGroup = async () => {
+const getGroups = async () => {
     try {
         let data = await db.Group.findAll({
             order: [['name', 'ASC']]
@@ -21,5 +21,5 @@ const getGroup = async () => {
 }
 
 module.exports = {
-    getGroup
+    getGroups
 }
