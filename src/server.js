@@ -5,7 +5,8 @@ import initApiRoutes from './routes/api';
 import configCors from './config/cors';
 require("dotenv").config();
 import bodyParser from 'body-parser';
-// import connection from './config/connectDB';
+import connection from './config/connectDB';
+import { createJWT, verifyToken } from './middleware/JWTAction';
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -21,7 +22,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // test connection db 
-// connection();
+connection();
+
+// test jwt
+createJWT ();
+let decodedData = verifyToken("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoicXVhbmciLCJhZGRyZXNzIjoidGF5IG5pbmgiLCJpYXQiOjE2NjAzODM0MDB9.r2FHUMcKbFE0K4i_dK24UJHHvlb_3VWHiQEijbes_l4")
+console.log(decodedData);
 
 // init web routes
 initWebRoutes(app);
