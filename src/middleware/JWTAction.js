@@ -3,7 +3,7 @@ require("dotenv").config();
 import jwt from 'jsonwebtoken';
 
 const createJWT = (payload) => {
-
+    
     let key = process.env.JWT_SECRET;
     let token = null;
     try {

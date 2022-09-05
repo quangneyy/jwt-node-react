@@ -6,6 +6,8 @@ const handleHelloWord = (req, res) => {
 
 const handleUserPage = async (req, res) => {
     // model => get data from database
+    res.cookie("test", "test cookie")
+
     let userList = await userService.getUserList();
     return res.render('user.ejs', { userList });
 }   

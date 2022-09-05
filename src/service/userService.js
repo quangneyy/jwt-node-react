@@ -33,10 +33,10 @@ const getUserList = async () => {
         raw: true,
         nest: true
     })
-    // let users = [];
-    // users = await db.User.findAll();
-    // return users;
 
+    let users = [];
+    users = await db.User.findAll();
+    return users;
     // const connection = await mysql.createConnection({host:'localhost', user: 'root', database: 'jwt', Promise: bluebird});
 
     // try {
