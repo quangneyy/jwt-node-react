@@ -14,8 +14,8 @@ const PORT = process.env.PORT || 8080;
 // config cors
 configCors(app);
 
-// config view engine
 configViewEngine(app);
+// config view engine
 
 // config body-parser
 app.use(bodyParser.json());
