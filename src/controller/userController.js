@@ -5,7 +5,6 @@ const readFunc = async (req, res) => {
         if (req.query.page && req.query.limit) {
             let page = req.query.page;
             let limit = req.query.limit;
-
             let data = await userApiService.getUserWithPagination(+page, +limit);
             return res.status(200).json({
                 EM: data.EM, // error message
